@@ -51,6 +51,11 @@ function checkAnswer() {
 }
 
 function startGame() {
+	$("#start").hide();
+	$("#quiz-box").show();
+	$("#timer").show();
+	$("#submitButton").on("click", checkAnswer);
+
 	question = questions[currentQuestion];
 	updateQuizBox(question);
 	updateTimer();
@@ -92,11 +97,12 @@ function updateQuizBox(question) {
 $(document).ready(function() {
 	$.ajax({url: triviaUri})
 	.done(function(response) {
-		questions = response.results;
-		startGame();
-	});
-	$("#submitButton").on("click", checkAnswer);
+		$("#startButton").on("click", startGame);
 
+		questions = response.results;
+		
+	});
+	
 
 
 });
