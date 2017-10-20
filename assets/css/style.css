@@ -28,3 +28,17 @@ hr {
   display: none;
 }
 
+@font-face{
+ font-family:'digital-clock-font';
+ src: url('alarm clock.ttf');
+}
+
+#timer {
+  font-family: digital-clock-font;
+  font-size: 30px;
+  font-style: bold;
+  color: red;
+  background-color: black;
+  border-radius: 5px;
+
+}

@@ -54,7 +54,6 @@ function startGame() {
 	$("#start").hide();
 	$("#quiz-box").show();
 	$("#timer").show();
-	$("#submitButton").on("click", checkAnswer);
 
 	question = questions[currentQuestion];
 	updateQuizBox(question);
@@ -91,6 +90,7 @@ function updateQuizBox(question) {
 	answerBox.replaceWith(answerDiv);
 
 	questionDiv.html(question["question"].replace(/\.$/, "?"));
+	$("#quiz-box > .answers > .radio").on("click", checkAnswer);
 	
 }
 
