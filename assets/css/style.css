@@ -12,7 +12,9 @@ body {
     background: -moz-linear-gradient(#33cc33, #001a00);
     background: linear-gradient(#33cc33, #001a00);
 	background-size: cover;
-	color: black;   
+	color: black; 
+  font-family: 'Abel', sans-serif;
+  font-size: 18px;
 }
 
 .jumbotron {
